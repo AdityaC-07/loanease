@@ -239,7 +239,7 @@ export const Hero = ({ onStartChat }: HeroProps) => {
             <span className="font-display font-semibold text-foreground">LoanEase</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2024 LoanEase. All rights reserved. A BFSI Solution.
+            © 2025 LoanEase. All rights reserved. A BFSI Solution.
           </p>
         </div>
       </footer>
