@@ -20,11 +20,7 @@ export const Hero = ({ onStartChat }: HeroProps) => {
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Features</a>
             <a href="#how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
-            <a href="#support" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Support</a>
           </div>
-          <Button variant="hero" onClick={onStartChat}>
-            Apply Now
-          </Button>
         </div>
       </nav>
 
@@ -53,8 +49,10 @@ export const Hero = ({ onStartChat }: HeroProps) => {
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Start Application
                 </Button>
-                <Button variant="outline" size="xl">
-                  Learn More
+                <Button variant="outline" size="xl" asChild>
+                  <a href="#how-it-works">
+                    Learn How It Works
+                  </a>
                 </Button>
               </div>
 
@@ -159,16 +157,62 @@ export const Hero = ({ onStartChat }: HeroProps) => {
         </div>
       </section>
 
+      {/* How It Works */}
+      <section id="how-it-works" className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+              How LoanEase Works
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Complete your entire loan journey in a single guided conversation with our AI assistant.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-card p-8 rounded-2xl border border-border">
+              <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+                <MessageCircle className="w-5 h-5 text-accent" />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Start the Chat</h3>
+              <p className="text-sm text-muted-foreground">
+                Share basic details like your name, PAN, and loan needs with our conversational assistant.
+              </p>
+            </div>
+
+            <div className="bg-card p-8 rounded-2xl border border-border">
+              <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+                <Shield className="w-5 h-5 text-accent" />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Check Eligibility</h3>
+              <p className="text-sm text-muted-foreground">
+                We instantly assess your credit profile and show you personalized loan offers and EMIs.
+              </p>
+            </div>
+
+            <div className="bg-card p-8 rounded-2xl border border-border">
+              <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+                <Clock className="w-5 h-5 text-accent" />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Get Sanction Letter</h3>
+              <p className="text-sm text-muted-foreground">
+                Select a plan you like and instantly receive a digital sanction letter you can share or download.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="bg-gradient-hero rounded-3xl p-12 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-50" />
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mb-4">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
                 Ready to Get Started?
               </h2>
-              <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
+              <p className="text-foreground/80 max-w-2xl mx-auto mb-8">
                 Join thousands of satisfied customers who've simplified their loan journey with LoanEase.
               </p>
               <Button 
